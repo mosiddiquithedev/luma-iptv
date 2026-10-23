@@ -55,3 +55,13 @@ The QA app and generated media remain development artifacts under `build/` and `
 - A native Android TV companion, signed universal APK, source, tests and build/signing instructions were added. See `android/VALIDATION.md` for eight unit tests, five Android TV instrumentation groups and physical-device limitations.
 - Actual macOS fixture captures and Android TV emulator screenshots are used on a responsive marketing page. Platform tabs, screenshot enlargement, FAQ disclosure, desktop/narrow layouts and local assets were verified; the Android and Mac downloads are included with SHA-256 checksums.
 - The owner requested that the marketing page remain private for review. GitHub also remains private.
+
+## macOS distribution — 24 October 2026
+
+- At the owner's subsequent request, the GitHub repository was made public for audience downloads.
+- Added `scripts/package-macos.sh` to build a universal macOS 14+ application, ad-hoc sign it, and package a drag-to-Applications DMG, application ZIP, installation guide and SHA-256 checksums.
+- All 15 local Swift check groups passed. Optional provider integration was skipped.
+- Both arm64 and x86_64 release builds succeeded with macOS 14.0 deployment targets. The universal binary contains both architectures and links only Apple system frameworks/libraries; VLC remains an optional external runtime.
+- Verified the application signature, Info.plist, DMG checksum, mounted DMG contents, Applications shortcut and matching binaries in the DMG and extracted ZIP. All artifact SHA-256 checksums passed.
+- The app extracted from the release ZIP launched and remained running during a five-second Apple Silicon smoke check. Intel runtime behavior was not tested.
+- No Developer ID identity is installed on this Mac. This release is ad-hoc signed and unnotarized; installation instructions and release notes disclose the Gatekeeper limitation.

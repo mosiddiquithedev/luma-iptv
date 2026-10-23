@@ -11,7 +11,21 @@ Requires macOS 14 or later and Swift 6 / Apple Command Line Tools. Xcode is opti
 open build/Luma.app
 ```
 
-The build produces a locally signed application at `build/Luma.app`. You can copy it to your Applications folder. Distribution to other Macs requires your own Developer ID signing and notarization.
+The build produces an ad-hoc signed application at `build/Luma.app`. You can copy it to your Applications folder.
+
+## Download and install
+
+Download the macOS DMG from [GitHub Releases](https://github.com/mosiddiquithedev/luma-iptv/releases/latest), open it, and drag Luma to Applications. The universal app supports Apple Silicon and Intel Macs running macOS 14 or later. A ZIP is also available. Releases in a private repository require repository access.
+
+The current release is ad-hoc signed and **not Apple notarized**. macOS may block the first launch. After attempting to open it, use System Settings → Privacy & Security → Open Anyway if offered, and only if you trust the download. Managed Macs may restrict this. A Developer ID certificate and Apple notarization are needed for standard Gatekeeper distribution.
+
+To build the universal DMG, ZIP, installation guide and SHA-256 checksums locally:
+
+```sh
+./scripts/package-macos.sh
+```
+
+Artifacts are written to `build/releases/<version>/`. The script builds both architectures, checks the app signature, and verifies the disk image.
 
 Install VLC in `/Applications/VLC.app` for integrated playback of MPEG-TS, MKV, HLS and other IPTV formats. Luma loads the local VLC runtime; it does not bundle or download VLC. If VLC is unavailable or incompatible with the machine architecture, Luma falls back to Apple's AVPlayer for supported formats. The player displays which engine is in use.
 
