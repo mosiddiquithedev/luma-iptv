@@ -89,3 +89,9 @@ Development builds also include opt-in render checks in `DebugQA.swift`; these a
 - `Sources/Luma`: SwiftUI application, native video surface, playback controller, Keychain and persistence.
 - `Sources/CVLC`: a dynamically loaded VLC bridge, with no third-party build dependencies.
 - `Tests/LumaCoreTests`: executable core and optional integration checks.
+
+## Android TV and marketing page
+
+The companion TV project is in [`android/`](android/README.md). It carries Luma's provider/M3U library, Discover customization, favorites, history, resume, details and episode autoplay into a native D-pad interface. See its README for builds, signing, TV controls and validation limits.
+
+The marketing page source is in [`marketing/`](marketing/README.md), with actual app screenshots and direct-build installation instructions. It is private for review. The local Xtream HTTP compatibility simulation is in [`postman/`](postman/README.md).

@@ -4,3 +4,10 @@
 *.xcuserstate
 DerivedData/
 build/
+.gradle/
+local.properties
+*.jks
+*.keystore
+marketing/.sites-local/
+postman/.dependencies/
+*.ndjson

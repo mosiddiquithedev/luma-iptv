@@ -1,0 +1,5 @@
+simulation: luma-provider-compatibility
+routing: path
+mocks:
+  - routeKey: xtream
+    path: ../mocks/xtream/config.yaml

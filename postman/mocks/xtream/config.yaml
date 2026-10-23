@@ -1,0 +1,4 @@
+version: 1
+name: luma-xtream-fixture
+mockSrc: default.js
+interceptRequests: true

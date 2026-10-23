@@ -48,3 +48,10 @@ The QA app and generated media remain development artifacts under `build/` and `
 - Startup and dashboard AppKit renders were inspected. Credentials remain in Keychain, and tests inject an isolated fixture account rather than reading or changing the real saved login.
 - Keychain errors are distinguished from a missing login. Library loading and provider errors no longer leave returning users on the connection form.
 - Signed release 1.3.1 passed signature/Info.plist checks, reopened successfully, and restored the real saved provider account and catalog without entering credentials.
+
+## Android TV companion and marketing — 24 October 2026
+
+- The original macOS source was committed and pushed with GitHub CLI to the private `mosiddiquithedev/luma-iptv` repository. The owner confirmed using the signed-in account. All 15 existing Swift core check groups passed; optional live provider integration was not rerun in this task.
+- A native Android TV companion, signed universal APK, source, tests and build/signing instructions were added. See `android/VALIDATION.md` for eight unit tests, five Android TV instrumentation groups and physical-device limitations.
+- Actual macOS fixture captures and Android TV emulator screenshots are used on a responsive marketing page. Platform tabs, screenshot enlargement, FAQ disclosure, desktop/narrow layouts and local assets were verified; the Android and Mac downloads are included with SHA-256 checksums.
+- The owner requested that the marketing page remain private for review. GitHub also remains private.
